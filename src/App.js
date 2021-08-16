@@ -3,6 +3,7 @@ import Header from "./Header";
 import Main from "./Main";
 import Basket from "./Basket";
 import data from "./data";
+import './App.css';
 
 
 function App() {
@@ -16,11 +17,11 @@ function App() {
     if (exist) {
       setCartItems(
         cartItems.map(x =>
-          x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
+          x.id === product.id ? { ...exist, qty: exist.qty + 1  } : x
         )
       );
     } else {
-      setCartItems([...cartItems, { ...product, qty: 1 }]);
+      setCartItems([...cartItems, { ...product, qty: 1 , isDisable:false }]);
       console.log(product)
     }
   };
@@ -39,7 +40,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <div className="row">
+      <div className="grid">
         <Main onAdd={onAdd} products={products} />
         <Basket onAdd={onAdd} onRemove={onRemove} cartItems={cartItems} />
       </div>
