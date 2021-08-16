@@ -2,9 +2,12 @@ import React from 'react'
 
 function Basket(props) {
     const {cartItems,onAdd,onRemove} = props;
+    console.log(cartItems.qty)
+    const qty = cartItems.map((e) => e.qty )
+    console.log(qty)
     const itemsPrice = cartItems.reduce((a,c) => a + c.price * c.qty , 0);
     const taxPrice = itemsPrice * 0.14;
-    const shippingPrice = itemsPrice > 2000 ? 0 : 50 ;
+    const shippingPrice = itemsPrice * qty  > 2000 ? 0 : 50 ;
     const totalPrice = itemsPrice + taxPrice + shippingPrice;
     return (
        <aside className="block col-1">

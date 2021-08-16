@@ -12,6 +12,7 @@ function App() {
 
   const onAdd = (product) => {
     const exist = cartItems.find(x => x.id === product.id);
+    console.log(exist)
     if (exist) {
       setCartItems(
         cartItems.map(x =>
@@ -20,8 +21,10 @@ function App() {
       );
     } else {
       setCartItems([...cartItems, { ...product, qty: 1 }]);
+      console.log(product)
     }
   };
+  console.log(cartItems)
 
    const onRemove = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
