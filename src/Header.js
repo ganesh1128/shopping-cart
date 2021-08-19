@@ -2,17 +2,13 @@ import React from 'react'
 
 function Header(props) {
     return (
-       <header className="row block center">
+       <header className="center">
            <div>
                <a href="#/">
-               <h1>Small Shopping Cart</h1>
+               <h1 className="center">Small Shopping Cart</h1>
                </a>
            </div>
-           <div>
-               <a href="#/cart">Cart</a>  <a href="#/signin">SignIn</a>
-               
-
-           </div>
+          
        </header>
     )
 }

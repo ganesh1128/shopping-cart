@@ -37,6 +37,13 @@ a{
   gap: 15px;
   margin: 20px;
 }
+.center{
+  background-color: #e0e0e0;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
 .col1 {
   display: flex;
   text-align: center;
