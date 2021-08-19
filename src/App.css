@@ -38,7 +38,9 @@ a{
   margin: 20px;
 }
 .col1 {
+  display: flex;
   text-align: center;
+  justify-content: center;
 }
 .block{
   background-color: #e0e0e0;
@@ -60,7 +62,7 @@ button{
   border-radius: 0.5rem;
   border: 0.1rem #404040 solid;
   background-color: #f0c040;
-  width: 100%;
+  width: 75%;
   cursor: pointer;
 }
 button.add{
@@ -88,6 +90,24 @@ button.badge{
   .row {
     grid-template-columns: 1fr;
   }
+  button{
+    font-size: 0.8rem;
+    padding: 0.2rem;
+    margin: 0.1rem;
+    border-radius: 0.5rem;
+    border: 0.1rem #404040 solid;
+    background-color: #f0c040;
+    width: 60%;
+    cursor: pointer;
+  }
+  .row5 {
+    display: flex;
+    grid-gap: 15px;
+    gap: 15px;
+    margin: 20px;
+    align-items: center;
+    flex-direction: column;
+}
 }
 
 @media (min-width:551px) and (max-width:850px) {
@@ -97,10 +117,32 @@ button.badge{
   .row {
     grid-template-columns: 1fr 1fr;
   }
+  button{
+    font-size: 0.8rem;
+    padding: 0.2rem;
+    margin: 0.1rem;
+    border-radius: 0.5rem;
+    border: 0.1rem #404040 solid;
+    background-color: #f0c040;
+    width: 75%;
+    cursor: pointer;
+  }
+  
+
 }
 
 @media (min-width:851px) and (max-width:1024px) {
   .grid {
     grid-template-columns: 1fr;
+  }
+  button{
+    font-size: 0.8rem;
+    padding: 0.2rem;
+    margin: 0.1rem;
+    border-radius: 0.5rem;
+    border: 0.1rem #404040 solid;
+    background-color: #f0c040;
+    width: 75%;
+    cursor: pointer;
   }
 }
